@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="clicklistener"
+                type="android.view.View.OnClickListener"/>
+
+    </data>
+
+    <FrameLayout
+            android:id="@+id/square_image_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:onClick="@{clicklistener}"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:animateLayoutChanges="true"
+            >
+
+
+        <com.rupan3th.manualcamerax.gallery.views.SquareImageView
+                android:id="@+id/square_image_view"
+                android:background="@color/grid_thumbnail_background"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+        <TextView
+                android:id="@+id/thumb_tag_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:textAlignment="textEnd"
+                tools:text="JPG"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:textAppearance="@style/BoldTextWithShadow"
+                />
+
+        <ImageView
+                android:id="@+id/selection_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_thumbnail_selected_radio"
+                android:visibility="gone"
+                tools:visibility="visible"
+                >
+
+        </ImageView>
+    </FrameLayout>
+
+</layout>

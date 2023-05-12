@@ -1,0 +1,3 @@
+rootProject.name = "ManualCameraX"
+include ':app'
+include ':circularbarlib'
